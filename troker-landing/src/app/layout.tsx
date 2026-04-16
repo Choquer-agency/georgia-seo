@@ -34,6 +34,9 @@ export async function generateMetadata(): Promise<Metadata> {
     alternates: {
       canonical: `https://${config.domain}`,
     },
+    verification: {
+      google: "X5FK9KeOL4smub8ZAMM_tRfyoRoFgWez_KBOcoF6Xr0",
+    },
     other: {
       "geo.region": config.geoRegionCode || "US-AZ",
       "geo.placename": config.schemaAddress?.locality || "Phoenix",
