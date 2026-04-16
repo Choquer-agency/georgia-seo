@@ -48,6 +48,9 @@ export interface DomainConfig {
   // Google Tag Manager
   gtmId?: string;
 
+  // Google Analytics 4 (gtag.js)
+  ga4Id?: string;
+
   // Optional per-region accent override
   accentColor?: string;
 
@@ -155,4 +158,5 @@ export const defaultConfig: DomainConfig = {
     longitude: -84.388,
   },
   geoRegionCode: "US-GA",
+  ga4Id: "G-WKWFCV6WTV",
 };

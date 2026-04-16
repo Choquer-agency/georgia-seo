@@ -3,6 +3,7 @@ import { neueMontreal, neueBit, ibmPlexMono } from "./fonts";
 import { getDomainConfig } from "@/lib/getDomainConfig";
 
 import { GoogleTagManager, GoogleTagManagerNoscript } from "@/components/GoogleTagManager";
+import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import "./globals.css";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -62,6 +63,7 @@ export default function RootLayout({
     >
       <head>
         {config.gtmId && <GoogleTagManager gtmId={config.gtmId} />}
+        {config.ga4Id && <GoogleAnalytics ga4Id={config.ga4Id} />}
       </head>
       <body className="font-sans">
         {config.gtmId && <GoogleTagManagerNoscript gtmId={config.gtmId} />}
