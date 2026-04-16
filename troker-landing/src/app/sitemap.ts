@@ -4,6 +4,7 @@ import { domainMap } from "@/content/domains";
 import { defaultConfig } from "@/content/config";
 import { getAllServiceSlugs } from "@/content/services";
 import { getAllIndustrySlugs } from "@/content/industries";
+import { getAllLocationSlugs, getAllServiceSeoSlugs } from "@/content/seo-pages";
 import blogManifest from "@/content/blog/manifest.json";
 
 export const dynamic = "force-dynamic";
@@ -42,6 +43,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.9,
   }));
 
+  const locationEntries: MetadataRoute.Sitemap = getAllLocationSlugs().map((slug) => ({
+    url: `https://${domain}/locations/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.95,
+  }));
+
+  const seoServiceEntries: MetadataRoute.Sitemap = getAllServiceSeoSlugs().map((slug) => ({
+    url: `https://${domain}/services/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.95,
+  }));
+
   const toolsEntries: MetadataRoute.Sitemap = [
     {
       url: `https://${domain}/tools/seo-roi-calculator`,
@@ -66,6 +81,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     ...serviceEntries,
     ...industryEntries,
+    ...locationEntries,
+    ...seoServiceEntries,
     ...toolsEntries,
     ...(posts.length > 0
       ? [

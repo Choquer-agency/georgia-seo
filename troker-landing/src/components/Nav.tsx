@@ -38,18 +38,20 @@ export function Nav({ brandName }: { brandName: string }) {
           "fixed top-0 left-0 right-0 z-50 transition-all",
           scrolled ? "nav-scrolled" : ""
         )}
-        style={{ transitionDuration: "var(--duration-half)" }}
+        style={{
+          transitionDuration: "var(--duration-half)",
+          ...(scrolled
+            ? { background: "rgba(255,255,255,0.85)", backdropFilter: "blur(16px)", boxShadow: "0 1px 3px rgba(0,0,0,0.08)" }
+            : {}),
+        }}
       >
         <div
           className={clsx(
             "u-container flex items-center justify-between transition-all",
-            scrolled ? "py-2 mx-6 mt-2 rounded-md" : "py-5"
+            scrolled ? "py-2" : "py-5"
           )}
           style={{
             transitionDuration: "var(--duration-half)",
-            ...(scrolled
-              ? { background: "rgba(255,255,255,0.8)", backdropFilter: "blur(16px)" }
-              : {}),
           }}
         >
           {/* Logo */}
