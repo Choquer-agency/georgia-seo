@@ -1,6 +1,7 @@
 export type SeoPageType = "location" | "industry";
 
 export interface SeoPageFaq { question: string; answer: string; }
+export interface SeoPageCustomSection { heading: string; paragraphs: string[]; links?: { href: string; anchor: string; note?: string }[]; }
 export interface SeoPageInternalLink { href: string; anchor: string; description: string; }
 export interface SeoPagePainPoint { title: string; description: string; }
 export interface SeoPageProcessStep { step: number; title: string; description: string; }
@@ -18,6 +19,7 @@ export interface SeoPageConfig {
   heroH1: string;
   heroAnswer: string;
   heroBullets: string[];
+  customSections?: SeoPageCustomSection[];
   problemHeading: string;
   problemIntro: string;
   painPoints: SeoPagePainPoint[];
@@ -99,20 +101,46 @@ const atlantaPage: SeoPageConfig = {
   type: "location",
   primaryKeyword: "SEO services Atlanta",
   secondaryKeywords: ["SEO agency Atlanta", "Atlanta SEO firms", "Atlanta SEO company", "local SEO Atlanta", "Atlanta search engine optimization", "best Atlanta SEO company"],
-  metaTitle: "SEO Services Atlanta, GA | Data-Driven Agency | Georgia SEO Experts",
-  metaDescription: "Atlanta SEO services that drive measurable traffic growth. Our clients see a 47% average organic increase in 6 months — backed by a written guarantee. Free audit.",
+  metaTitle: "SEO Agency Atlanta | SEO Services in Atlanta, GA | Georgia SEO Experts",
+  metaDescription: "Looking for an SEO agency Atlanta businesses can hold to account? Three specialists, Monday reports, and local SEO, link building, on-page SEO and content work.",
   heroEyebrow: "Atlanta SEO Agency",
-  heroH1: "Atlanta SEO Services That Drive Real Revenue",
-  heroAnswer: "Georgia SEO Experts is an Atlanta-based agency helping local businesses grow organic traffic and capture high-intent searches. Our data-driven approach delivers a 47% average traffic increase within six months — backed by a written performance guarantee.",
+  heroH1: "SEO Agency Atlanta: Transparent SEO Services With Monday Reports",
+  heroAnswer: "Georgia SEO Experts is an SEO agency Atlanta businesses can hold to account. We are three specialists, a developer, an SEO specialist and a director, and we have been in business for over seven years. You get a report every Monday, and we work across four services: local SEO, link building, on-page SEO and content marketing.",
   heroBullets: ["100+ Georgia businesses served since 2019", "165+ websites built and optimized for search", "47% average organic traffic lift in 6 months", "Google Partner · Certified Webflow Agency"],
-  problemHeading: "Why most Atlanta businesses struggle to rank",
-  problemIntro: "Atlanta is one of the most competitive local search markets in the Southeast. The top three Map Pack results capture 42% of local clicks — and most businesses never make it in.",
-  painPoints: [
-    { title: "Unoptimized Google Business Profile", description: "No service categories, no area coverage, inconsistent NAP data, outdated photos. Google doesn't know what you do or where you serve." },
-    { title: "Generic homepage targeting nothing", description: "Your site says 'welcome' and lists services. It doesn't target any specific search query, lacks schema markup, and doesn't answer what Atlanta searchers are actually typing into Google." },
-    { title: "Zero local citations or backlinks", description: "You're not listed on Atlanta Chamber, Yelp, Angi, BBB, or the 40+ citation sources Google uses to verify local businesses. Competitors with 80+ citations outrank you automatically." },
-    { title: "No review strategy", description: "Competitors have 200+ Google reviews at 4.8 stars. You have 14 reviews from two years ago. Review volume and recency are top-5 ranking factors for the local pack." },
+  customSections: [
+    {
+      heading: "How working with our Atlanta SEO team works",
+      paragraphs: [
+        "[Placeholder: the sign-up and process steps will be added once the owner confirms them. We do not invent steps.]",
+        "Whichever steps apply, you will hear from the same three specialists and get a report every Monday. For an outside view on what to expect when hiring, read Google's own guide.",
+      ],
+      links: [
+        { href: "https://developers.google.com/search/docs/fundamentals/do-i-need-seo", anchor: "Google's guide: do you need an SEO?" },
+        { href: "/blog/how-to-choose-seo-agency-georgia", anchor: "How to choose an SEO agency in Georgia" },
+      ],
+    },
+    {
+      heading: "What our SEO consulting services include in Atlanta",
+      paragraphs: [
+        "Our SEO consulting services in Atlanta cover four services: local SEO, link building, on-page SEO and content marketing.",
+      ],
+      links: [
+        { href: "/services/local-seo", anchor: "Local SEO" },
+        { href: "/services/link-building", anchor: "Link building" },
+        { href: "/services/content-marketing", anchor: "Content marketing" },
+      ],
+    },
+    {
+      heading: "What SEO costs in Atlanta",
+      paragraphs: [
+        "Cost depends on scope and competition. Our pricing guide explains what drives the price of SEO in Georgia.",
+      ],
+      links: [{ href: "/blog/seo-cost-georgia-pricing-guide", anchor: "SEO cost in Georgia: pricing guide" }],
+    },
   ],
+  problemHeading: "",
+  problemIntro: "",
+  painPoints: [],
   processHeading: "Our 4-step Atlanta SEO process",
   processIntro: "Clear path from audit to results. No black-box tactics, no 50-page reports you never read.",
   processSteps: locationProcess("Atlanta"),
