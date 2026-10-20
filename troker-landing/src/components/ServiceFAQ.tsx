@@ -108,6 +108,14 @@ export function ServiceFAQ({ faqs, serviceTitle }: ServiceFAQProps) {
             >
               <p className="font-sans text-fluid-main text-dark opacity-60 leading-relaxed pb-5">
                 {faq.answer}
+                {faq.link && (
+                  <>
+                    {" "}
+                    <a href={faq.link.href} className="underline underline-offset-4">
+                      {faq.link.anchor}
+                    </a>
+                  </>
+                )}
               </p>
             </div>
           </div>

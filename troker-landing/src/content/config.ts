@@ -62,6 +62,7 @@ export interface FAQItem {
   question: string;
   answer: string;
   category: "seo" | "pricing" | "process" | "local" | "general";
+  link?: { href: string; anchor: string };
 }
 
 export interface SEOService {
