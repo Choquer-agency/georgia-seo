@@ -355,7 +355,33 @@ export function SeoPageView({ page, routePrefix = "seo" }: SeoPageViewProps) {
         </div>
       </section>
 
-      {/* ──────────────── PROBLEM ──────────────── */}
+      {page.customSections?.map((s, idx) => (
+        <section key={s.heading} className="section-space-large" style={{ backgroundColor: idx % 2 === 0 ? "#FFF9F0" : "#F8F4EC" }}>
+          <div className="u-container">
+            <div className="max-w-[85rem] mx-auto">
+              <div className="max-w-[70ch]">
+                <h2 className="font-sans font-medium text-fluid-h3 leading-[1.15] tracking-tight text-dark mb-4">
+                  {s.heading}
+                </h2>
+                {s.paragraphs.map((p) => (
+                  <p key={p} className="font-sans text-base text-dark opacity-70 leading-relaxed mb-4">{p}</p>
+                ))}
+                {s.links && (
+                  <ul className="list-disc pl-5 space-y-2">
+                    {s.links.map((l) => (
+                      <li key={l.href} className="font-sans text-base text-dark">
+                        <a href={l.href} className="underline underline-offset-4 hover:opacity-70">{l.anchor}</a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </div>
+          </div>
+        </section>
+      ))}
+
+      {page.painPoints.length > 0 && (
       <section className="section-space-large" style={{ backgroundColor: "#FFF9F0" }}>
         <div className="u-container">
           <div className="max-w-[85rem] mx-auto">
@@ -394,6 +420,7 @@ export function SeoPageView({ page, routePrefix = "seo" }: SeoPageViewProps) {
           </div>
         </div>
       </section>
+      )}
 
       {/* ──────────────── PROCESS ──────────────── */}
       <section className="section-space-large" style={{ backgroundColor: "#F8F4EC" }}>
