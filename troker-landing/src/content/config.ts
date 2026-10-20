@@ -137,9 +137,9 @@ export const defaultConfig: DomainConfig = {
   country: "US",
   domainType: "location",
   brandName: "Georgia SEO Experts",
-  metaTitle: "Georgia SEO Experts | Atlanta SEO Agency & Services",
+  metaTitle: "SEO Services & Atlanta SEO Agency | Georgia SEO Experts",
   metaDescription:
-    "Atlanta SEO agency helping Georgia businesses rank higher on Google. Data-driven SEO strategies that deliver measurable traffic and revenue growth. Free SEO audit.",
+    "SEO services from an Atlanta SEO agency: local SEO, link building, on-page SEO and content marketing for Georgia businesses, with clear Monday reports.",
   locality: "Atlanta",
   stateCode: "GA",
   nearbyAreas: "Marietta, Roswell, Alpharetta, Decatur, and Savannah",
