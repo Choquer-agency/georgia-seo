@@ -172,8 +172,8 @@ export default async function BlogPostPage({ params }: PageProps) {
             prose-ul:text-dark prose-ul:opacity-70
             prose-ol:text-dark prose-ol:opacity-70
             prose-blockquote:border-brand prose-blockquote:text-dark prose-blockquote:opacity-60
-            prose-h2:text-fluid-h4 prose-h2:mt-12 prose-h2:mb-4
-            prose-h3:text-fluid-h5 prose-h3:mt-8 prose-h3:mb-3"
+            prose-h2:text-fluid-h4 prose-h2:mt-12 prose-h2:mb-4 prose-h2:scroll-mt-28
+            prose-h3:text-fluid-h5 prose-h3:mt-8 prose-h3:mb-3 prose-h3:scroll-mt-28"
           dangerouslySetInnerHTML={{ __html: post.htmlContent }}
         />
 
