@@ -3,7 +3,7 @@ title: "The Complete Guide to SEO for Contractors, Roofers, Plumbers, and Trades
 slug: "seo-for-contractors-trades-guide"
 excerpt: "How contractors and trades businesses can use organic search to generate consistent project inquiries — covering service-area pages, Google Business Profile, review strategy, and industry-specific tactics."
 date: "2026-04-17"
-modifiedDate: "2026-04-17"
+modifiedDate: "2026-10-22"
 author: "Bryce Choquer"
 region: "Georgia"
 category: "Industry SEO"
@@ -11,11 +11,22 @@ tags: ["contractor SEO", "roofer SEO", "plumber SEO", "HVAC SEO", "trades SEO"]
 featuredImage: "/images/blog/contractor-seo-guide.jpg"
 ---
 
-# The Complete Guide to SEO for Contractors, Roofers, Plumbers, and Trades
+This guide is for contractors, roofers, plumbers and other trades businesses that want more project inquiries from Google. It covers service-area pages, trade-by-trade tactics, Google Business Profile and reviews.
 
 The construction and trades industry has one of the largest gaps between search demand and search supply in all of digital marketing. Homeowners and property managers search for contractors, roofers, plumbers, and HVAC technicians millions of times per month, yet the majority of trades businesses have websites that are functionally invisible to Google. The result is a massive opportunity for any contractor willing to invest in search optimization — and the data confirms that the competitive barriers are remarkably low.
 
 After building SEO programs for over 100 contractor clients across Georgia and nationwide, we have identified the patterns that separate trades businesses generating consistent organic inquiries from those still relying entirely on word-of-mouth and paid referral platforms. This guide covers those patterns in detail, organized by trade where the differences matter and consolidated where the principles are universal.
+
+**Table of contents**
+
+- [Why Contractor SEO Difficulty Is So Low](#why-contractor-seo-difficulty-is-so-low)
+- [Service-Area Pages: The Foundation of Contractor SEO](#service-area-pages-the-foundation-of-contractor-seo)
+- [Roofing SEO: Storm Content and Visual Proof](#roofing-seo-storm-content-and-visual-proof)
+- [Plumber SEO: Emergency Intent and Service Segmentation](#plumber-seo-emergency-intent-and-service-segmentation)
+- [HVAC SEO: Conquering Seasonality](#hvac-seo-conquering-seasonality)
+- [Painting, General Contractors, and Specialty Trades](#painting-general-contractors-and-specialty-trades)
+- [Google Business Profile: The Free Ranking Factor](#google-business-profile-the-free-ranking-factor)
+- [Connecting the Strategy to Your Market](#connecting-the-strategy-to-your-market)
 
 ## Why Contractor SEO Difficulty Is So Low
 
@@ -65,7 +76,7 @@ For specialty trades — electricians, carpenters, welders, masons, landscapers 
 
 ## Google Business Profile: The Free Ranking Factor
 
-Across every trade, Google Business Profile optimization is the single highest-ROI activity a contractor can undertake — and it costs nothing. A fully optimized GBP with complete service categories, weekly photo posts from job sites, prompt review responses, and an accurate service area definition outranks incomplete profiles in the local pack consistently.
+Across every trade, Google Business Profile optimization is the single highest-ROI activity a contractor can undertake — and it costs nothing. A fully optimized GBP with complete service categories, weekly photo posts from job sites, prompt review responses, and an accurate service area definition outranks incomplete profiles in the local pack consistently, and [Google's own guidance on local ranking](https://support.google.com/business/answer/7091) names relevance, distance and prominence as the factors.
 
 The most common GBP mistakes we see in contractor profiles include listing only one service category when the business offers six or more, having no photos beyond the logo, responding to reviews sporadically or not at all, and failing to update the service area when the business expands geographically. Each of these mistakes is correctable in under an hour, and the ranking impact is often visible within two to three weeks.
 
