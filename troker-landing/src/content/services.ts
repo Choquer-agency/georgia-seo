@@ -17,6 +17,12 @@ export interface ServicePageConfig {
   faqs: (locality: string, region: string) => FAQItem[];
   showComparison: boolean;
   showPortfolio: boolean;
+  areasSection?: {
+    heading: string;
+    paragraphs: string[];
+    links: { href: string; anchor: string }[];
+    outro: string;
+  };
 }
 
 /* ─── Service Page Configs ─── */
@@ -29,31 +35,30 @@ export const serviceMap: Record<string, ServicePageConfig> = {
     problemEyebrow: "Why You're Not Ranking Locally",
     problemHeading: "Your competitors are getting the calls that should be yours.",
     processHeading: "How we dominate local search in four steps.",
-    metaTitle: (locality, region) =>
-      `Local SEO Services ${locality} | ${region} Local SEO Agency`,
-    metaDescription: (locality, region) =>
-      `Local SEO services for ${region} businesses. Dominate the Google Map Pack in ${locality}. Google Business Profile optimization, local citations, and more. Free audit.`,
+    metaTitle: () => `Local SEO Services in Atlanta & Georgia | Georgia SEO Experts`,
+    metaDescription: () =>
+      `Local SEO services for Atlanta, Marietta, Roswell, Alpharetta and Decatur businesses: Google Business Profile, listings, reviews and local pages, with clear Monday reports.`,
     heroH1: (_locality, region) =>
       `Local SEO Services for ${region} Businesses`,
     heroSubhead: (_locality, region) =>
-      `46% of Google searches have local intent. When someone in ${region} searches for your service, are they finding you — or your competitor? We make sure it's you.`,
+      `Our local SEO services help Georgia businesses show up when nearby customers search on Google and Google Maps.`,
     heroQualifier: (_locality, region) =>
       `For ${region} businesses that want to dominate local search and the Google Map Pack.`,
     painPoints: [
       {
         title: "Invisible in the Map Pack",
         description:
-          "The top 3 Google Maps results get 42% of all local clicks. If you're not there, you're losing nearly half your potential local customers to competitors.",
+          "When nearby customers search on Google Maps, businesses outside the top results are rarely seen. We work on the profile, listing and review signals that decide who appears there.",
       },
       {
         title: "Inconsistent business listings",
         description:
-          "Your name, address, and phone number are different across directories. This confuses Google and tanks your local rankings.",
+          "If your name, address and phone number differ between directories, Google receives mixed signals about your business. We check your listings and make them match.",
       },
       {
         title: "No review strategy",
         description:
-          "Your competitors have 200+ reviews and a 4.8 rating. You have 12 reviews from 3 years ago. Google uses reviews as a major ranking factor.",
+          "Reviews are part of how Google and customers judge a local business. Without a steady way of asking for them, your profile can look stale next to nearby competitors.",
       },
       {
         title: "Generic website content",
@@ -92,35 +97,45 @@ export const serviceMap: Record<string, ServicePageConfig> = {
           "We implement a review acquisition system and build local backlinks from relevant directories, publications, and community organizations.",
       },
     ],
-    faqs: (locality, region) => [
+    faqs: () => [
       {
-        category: "local",
-        question: `How long does it take to rank in the ${locality} Map Pack?`,
-        answer: `Most businesses see significant Map Pack improvements within 60-90 days. Full dominance of local search results typically takes 4-6 months. The timeline depends on your current online presence, competition level, and the consistency of your NAP data across directories.`,
-      },
-      {
-        category: "pricing",
-        question: `How much does local SEO cost in ${region}?`,
-        answer: `Local SEO services in ${region} typically range from $1,500 to $5,000 per month depending on competition and scope. Our Local Starter package begins at $1,500/month and includes GBP optimization, citation building, and on-page SEO. Contact us for a custom quote based on your market.`,
-      },
-      {
-        category: "seo",
-        question: "What is Google Business Profile optimization?",
-        answer: `Google Business Profile (formerly Google My Business) is the listing that appears in Google Maps and the Map Pack. Optimizing it includes completing every field, adding high-quality photos, posting regular updates, managing reviews, and ensuring your categories and attributes are correct. It's the single most important factor for local search visibility in ${region}.`,
+        category: "process",
+        question: "How does local SEO work with you?",
+        answer: `Local SEO works by improving the signals Google uses for nearby searches: your Google Business Profile, business listings, reviews and the local pages on your website. We work on those with you, and you get a report every Monday. We are three specialists, in business for over seven years.`,
       },
       {
         category: "process",
-        question: "What are local citations and why do they matter?",
-        answer: `Local citations are mentions of your business name, address, and phone number on other websites — directories like Yelp, Yellow Pages, BBB, and industry-specific listings. Consistent citations across the web tell Google your business is legitimate and trustworthy, which directly impacts your local rankings in ${locality} and surrounding areas.`,
+        question: "What do I need to do to get started?",
+        answer: `Getting started means telling us about your business, the areas you serve and what you want from search. Use the free SEO audit button on this page to begin that conversation with our team.`,
       },
       {
         category: "general",
-        question: "How important are Google reviews for local SEO?",
-        answer: `Extremely important. Google reviews are the second most important ranking factor for the Map Pack. Quantity, quality (star rating), recency, and how you respond to reviews all impact rankings. We implement review acquisition strategies that ethically grow your review count and improve your rating over time.`,
+        question: "How will I know it is working?",
+        answer: `You will see it in your Monday reports, which show how your search visibility and traffic are changing from week to week. Georgia SEO Experts reports on what has actually happened, not on promises.`,
+      },
+      {
+        category: "pricing",
+        question: "How is pricing set?",
+        answer: `Pricing depends on the scope of the work and how competitive your area is. Our pricing guide explains what drives the price of SEO in Georgia.`,
+        link: { href: "/blog/seo-cost-georgia-pricing-guide", anchor: "Read the SEO cost in Georgia pricing guide." },
       },
     ],
     showComparison: false,
     showPortfolio: true,
+    areasSection: {
+      heading: "Local SEO services across Atlanta, Marietta, Roswell, Alpharetta and Decatur",
+      paragraphs: [
+        "We provide local SEO services for businesses in Atlanta, Marietta, Roswell, Alpharetta and Decatur, and across Georgia statewide. Each area page explains how we work in that market:",
+      ],
+      links: [
+        { href: "/locations/seo-services-atlanta", anchor: "SEO services in Atlanta" },
+        { href: "/locations/marietta-seo", anchor: "Marietta SEO" },
+        { href: "/locations/seo-roswell", anchor: "Roswell SEO" },
+        { href: "/locations/seo-company-alpharetta", anchor: "Alpharetta SEO" },
+      ],
+      outro:
+        "For a plain-English walkthrough, read our guide to local SEO strategies for Atlanta businesses (/blog/local-seo-strategies-atlanta-businesses). For an outside view, see",
+    },
   },
 
   "technical-seo": {

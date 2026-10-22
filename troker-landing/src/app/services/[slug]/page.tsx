@@ -130,6 +130,41 @@ export default function ServicePage({ params }: ServicePageProps) {
         heading={service.problemHeading}
       />
       <MobileCta />
+      {service.areasSection && (
+        <section className="section-space-main" style={{ backgroundColor: "#FFF9F0" }}>
+          <div className="u-container max-w-3xl">
+            <h2 className="font-sans font-medium text-fluid-h3 leading-[1.1] text-dark mb-6">
+              {service.areasSection.heading}
+            </h2>
+            {service.areasSection.paragraphs.map((p) => (
+              <p key={p} className="font-sans text-fluid-main text-dark opacity-70 leading-relaxed mb-4">
+                {p}
+              </p>
+            ))}
+            <ul className="list-disc pl-5 space-y-2 mb-4">
+              {service.areasSection.links.map((l) => (
+                <li key={l.href} className="font-sans text-fluid-main text-dark">
+                  <a href={l.href} className="underline underline-offset-4">
+                    {l.anchor}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <p className="font-sans text-fluid-main text-dark opacity-70 leading-relaxed">
+              {service.areasSection.outro}{" "}
+              <a
+                href="https://support.google.com/business/answer/7091"
+                className="underline underline-offset-4"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Google&apos;s guide to improving your local ranking
+              </a>
+              .
+            </p>
+          </div>
+        </section>
+      )}
       {service.showComparison && <SEOComparison slug={config.slug} />}
       <ServiceProcess steps={service.processSteps} heading={service.processHeading} />
       {service.showPortfolio && <Portfolio slug={config.slug} />}
